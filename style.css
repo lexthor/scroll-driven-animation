@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #111722;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20vh auto;
+    padding: 20px;
+}
+
+.grid {
+    column-count: 4;
+    column-gap: 20px;
+    padding: 20px 0;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 400px) {
+    .grid {
+        column-count: 1;
+    }
+}
+
+.item {
+    background-color: #1b2530;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    width: 100%;
+    /* animation */
+    view-timeline-name: --item-timeline;
+    animation: slide-fade-in both;
+    animation-timeline: --item-timeline;
+    animation-range: contain 0% contain 50%;
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item-1 {
+    height: 120px;
+}
+
+.item-2 {
+    height: 180px;
+}
+
+.item-3 {
+    height: 240px;
+}
+
+.item-4 {
+    height: 160px;
+}
+
+.item-5 {
+    height: 200px;
+}
+
+.item-6 {
+    height: 140px;
+}
+
+.item-7 {
+    height: 220px;
+}
+
+.item-8 {
+    height: 170px;
+}
+
+.item-9 {
+    height: 130px;
+}
+
+.item-10 {
+    height: 260px;
+}
+
+.item-11 {
+    height: 190px;
+}
+
+.item:nth-child(13n+1) {
+    height: 115px;
+}
+
+.item:nth-child(13n+2) {
+    height: 145px;
+}
+
+.item:nth-child(13n+3) {
+    height: 175px;
+}
+
+.item:nth-child(13n+4) {
+    height: 135px;
+}
+
+.item:nth-child(13n+5) {
+    height: 165px;
+}
+
+.item:nth-child(13n+6) {
+    height: 125px;
+}
+
+.item:nth-child(13n+7) {
+    height: 155px;
+}
+
+.item:nth-child(13n+8) {
+    height: 185px;
+}
+
+.item:nth-child(13n+9) {
+    height: 105px;
+}
+
+.item:nth-child(13n+10) {
+    height: 195px;
+}
+
+.item:nth-child(13n+11) {
+    height: 140px;
+}
+
+.item:nth-child(13n+12) {
+    height: 120px;
+}
+
+.item:nth-child(13n+13) {
+    height: 160px;
+}
+
+
+@keyframes slide-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
